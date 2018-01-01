@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetToolkit", "DotNetToolkit\DotNetToolkit.csproj", "{5530DAD0-AF7A-4063-B887-233D5BDE8598}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5530DAD0-AF7A-4063-B887-233D5BDE8598}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5530DAD0-AF7A-4063-B887-233D5BDE8598}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5530DAD0-AF7A-4063-B887-233D5BDE8598}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5530DAD0-AF7A-4063-B887-233D5BDE8598}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BBD45FBF-3768-4D2E-AA46-A43A54CA23AC}
+	EndGlobalSection
+EndGlobal

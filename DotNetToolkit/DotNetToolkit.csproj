@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/Haiping-Chen/DotNetToolkit</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Haiping-Chen/DotNetToolkit</RepositoryUrl>
+    <PackageTags>Toolkit Helper EntityFramework Tool Utility</PackageTags>
+    <Description>.NET Helpers</Description>
+    <Authors>Haiping Chen</Authors>
+    <Company>Personal</Company>
+    <Copyright>MIT</Copyright>
+    <PackageLicenseUrl>https://github.com/Haiping-Chen/DotNetToolkit/blob/master/LICENSE</PackageLicenseUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+  </ItemGroup>
+
+</Project>
