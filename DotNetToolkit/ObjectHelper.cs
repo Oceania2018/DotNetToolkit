@@ -9,6 +9,8 @@ namespace DotNetToolkit
     {
         public static T ToObject<T>(this Object obj)
         {
+            if (obj == null) return default(T);
+
             return JObject.FromObject(obj).ToObject<T>();
         }
 

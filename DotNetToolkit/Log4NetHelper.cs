@@ -13,7 +13,7 @@ namespace DotNetToolkit
 
         public static String configFilePath = "Settings\\log4net.config";
 
-        public static void Log(this Object log, CfLogLevel level = CfLogLevel.DEBUG)
+        public static void Log(this Object log, LogLevel level = LogLevel.DEBUG)
         {
             if (!logger.Logger.Repository.Configured)
             {
@@ -31,19 +31,19 @@ namespace DotNetToolkit
 
             switch (level)
             {
-                case CfLogLevel.DEBUG:
+                case LogLevel.DEBUG:
                     logger.Debug(content);
                     break;
-                case CfLogLevel.INFO:
+                case LogLevel.INFO:
                     logger.Info(content);
                     break;
-                case CfLogLevel.WARN:
+                case LogLevel.WARN:
                     logger.Warn(content);
                     break;
-                case CfLogLevel.ERROR:
+                case LogLevel.ERROR:
                     logger.Error(content);
                     break;
-                case CfLogLevel.FATAL:
+                case LogLevel.FATAL:
                     logger.Fatal(content);
                     break;
                 default:
@@ -52,7 +52,7 @@ namespace DotNetToolkit
         }
     }
 
-    public enum CfLogLevel
+    public enum LogLevel
     {
         ALL = 1,
         DEBUG = 2,
