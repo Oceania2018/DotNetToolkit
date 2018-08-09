@@ -20,7 +20,7 @@ namespace DotNetToolkit
             procStartInfo.UseShellExecute = false;
             // Do not create the black window.
             procStartInfo.CreateNoWindow = true;
-            if (procStartInfo.EnvironmentVariables["OS"] == "Windows_NT")
+            if (procStartInfo.EnvironmentVariables.ContainsKey("OS") && procStartInfo.EnvironmentVariables["OS"] == "Windows_NT")
             {
                 procStartInfo.FileName = fileName;
             }
