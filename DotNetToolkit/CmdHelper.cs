@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Text;
 using System.Threading;
 
@@ -8,7 +9,7 @@ namespace DotNetToolkit
 {
     public static class CmdHelper
     {
-        public static string Run(string fileName, string arguments)
+        public static string Run(string fileName, string arguments, bool outputAsync = true)
         {
             Console.WriteLine($"{fileName} {arguments}");
 
@@ -19,29 +20,38 @@ namespace DotNetToolkit
             procStartInfo.RedirectStandardOutput = true;
             procStartInfo.UseShellExecute = false;
             // Do not create the black window.
-            procStartInfo.CreateNoWindow = true;
+            //procStartInfo.CreateNoWindow = true;
             if (procStartInfo.EnvironmentVariables.ContainsKey("OS") && procStartInfo.EnvironmentVariables["OS"] == "Windows_NT")
             {
-                procStartInfo.FileName = fileName;
+                procStartInfo.FileName = fileName + ".exe";
             }
             else
             {
                 procStartInfo.FileName = "sh";
             }
 
-            Process proc = new Process();
-            proc.StartInfo = procStartInfo;
-            proc.Start();
-
-            string buffer = String.Empty;
             string output = String.Empty;
-
-            while (!proc.HasExited)
+            using (Process proc = Process.Start(procStartInfo))
             {
-                Thread.Sleep(1);
-                buffer = proc.StandardOutput.ReadLine();
-                output += buffer;
-                Console.WriteLine(buffer);
+                using (StreamReader reader = proc.StandardOutput)
+                {
+                    if (outputAsync)
+                    {
+                        string buffer = String.Empty;
+                        while (!proc.HasExited)
+                        {
+                            Thread.Sleep(1);
+                            buffer = proc.StandardOutput.ReadLine();
+                            output += buffer;
+                            Console.WriteLine(buffer);
+                        }
+                    }
+                    else
+                    {
+                        output = reader.ReadToEnd();
+                        Console.WriteLine(output);
+                    }
+                }
             }
 
             return output;
