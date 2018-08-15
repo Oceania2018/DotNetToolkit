@@ -11,10 +11,10 @@
     <Company>Personal</Company>
     <Copyright>MIT</Copyright>
     <PackageLicenseUrl>https://github.com/Haiping-Chen/DotNetToolkit/blob/master/LICENSE</PackageLicenseUrl>
-    <Version>1.5.2</Version>
+    <Version>1.5.4</Version>
     <PackageReleaseNotes>Fix CmdHelper doesn't have OS key in Linux.</PackageReleaseNotes>
-    <AssemblyVersion>1.5.2.0</AssemblyVersion>
-    <FileVersion>1.5.2.0</FileVersion>
+    <AssemblyVersion>1.5.4.0</AssemblyVersion>
+    <FileVersion>1.5.4.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>

@@ -11,5 +11,11 @@ namespace DotNetToolkit
             int idx = new Random().Next(list.Count);
             return list[idx];
         }
+
+        public static T Random<T>(this List<T> list)
+        {
+            int idx = new Random().Next(list.Count);
+            return list[idx];
+        }
     }
 }

@@ -15,7 +15,7 @@ namespace DotNetToolkit
 
             System.Diagnostics.Process proc = new System.Diagnostics.Process();
             ProcessStartInfo procStartInfo = new ProcessStartInfo(fileName);
-            // procStartInfo.Arguments = arguments;
+            procStartInfo.Arguments = arguments;
             // The following commands are needed to redirect the standard output.
             // This means that it will be redirected to the Process.StandardOutput StreamReader.
             procStartInfo.RedirectStandardOutput = true;
