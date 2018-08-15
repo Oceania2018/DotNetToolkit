@@ -1,20 +1,21 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/Haiping-Chen/DotNetToolkit</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Haiping-Chen/DotNetToolkit</RepositoryUrl>
     <PackageTags>Toolkit Helper EntityFramework Tool Utility</PackageTags>
-    <Description>.NET Core Common Helpers</Description>
+    <Description>.NET Core Common Helpers.
+Many helpers such as: CmdHelper, Log4NetHelper, TypeHelper and JwtHelper and so on.</Description>
     <Authors>Haiping Chen</Authors>
     <Company>Personal</Company>
     <Copyright>MIT</Copyright>
     <PackageLicenseUrl>https://github.com/Haiping-Chen/DotNetToolkit/blob/master/LICENSE</PackageLicenseUrl>
-    <Version>1.5.4</Version>
-    <PackageReleaseNotes>Fix CmdHelper doesn't have OS key in Linux.</PackageReleaseNotes>
-    <AssemblyVersion>1.5.4.0</AssemblyVersion>
-    <FileVersion>1.5.4.0</FileVersion>
+    <Version>1.6.0</Version>
+    <PackageReleaseNotes>Change to .Net Standard 2.0</PackageReleaseNotes>
+    <AssemblyVersion>1.6.0.0</AssemblyVersion>
+    <FileVersion>1.6.0.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
